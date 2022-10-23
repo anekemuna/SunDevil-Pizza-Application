@@ -15,7 +15,6 @@ public class SunDevilPizzaApplication extends Application {
         stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);
         stage.show();
-        //crazy
     }
 
     public static void main(String[] args) {
