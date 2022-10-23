@@ -8,12 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <StackPane prefHeight="329.0" prefWidth="871.0">
+   <StackPane prefHeight="900.0" prefWidth="600.0">
       <children>
          <ImageView fitHeight="597.0" fitWidth="897.0">
             <image>
@@ -22,9 +23,35 @@
          </ImageView>
          <AnchorPane prefHeight="587.0" prefWidth="873.0">
             <children>
-                <Button layoutX="425.0" layoutY="273.0" onAction="#onHelloButtonClick" text="Hello!" />
+                <Button layoutX="360.0" layoutY="344.0" onAction="#onHelloButtonClick" text="Place an Order" textFill="#828181">
+                  <font>
+                     <Font name="Comic Sans MS" size="20.0" />
+                  </font></Button>
+               <ImageView fitHeight="82.0" fitWidth="76.0" layoutX="405.0" layoutY="61.0" preserveRatio="true">
+                  <image>
+                     <Image url="@image/pizza-logo.png" />
+                  </image>
+               </ImageView>
             
-                            <Label fx:id="welcomeText" />
+                            <Label fx:id="welcomeText" layoutX="329.0" layoutY="153.0" text="Welcome to" textFill="WHITE">
+                  <font>
+                     <Font name="Comic Sans MS Bold" size="40.0" />
+                  </font></Label>
+               <Label fx:id="welcomeText1" layoutX="310.0" layoutY="209.0" text="SunDevil Pizza" textFill="WHITE">
+                  <font>
+                     <Font name="Comic Sans MS Bold" size="40.0" />
+                  </font>
+               </Label>
+               <Label layoutX="428.0" layoutY="411.0" text="OR" textFill="#f47373">
+                  <font>
+                     <Font name="Comic Sans MS" size="20.0" />
+                  </font>
+               </Label>
+               <Button layoutX="357.0" layoutY="457.0" mnemonicParsing="false" text="Track an Order" textFill="WHITE">
+                  <font>
+                     <Font name="Comic Sans MS" size="20.0" />
+                  </font>
+               </Button>
             </children>
          </AnchorPane>
       </children>
