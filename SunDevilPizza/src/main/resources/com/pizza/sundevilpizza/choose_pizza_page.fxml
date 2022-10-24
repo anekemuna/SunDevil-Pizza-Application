@@ -29,17 +29,17 @@
             </Label>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="615.0" layoutY="263.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/cheese%20pizza.jpg" />
+                  <Image url="@image/cheese_pizza.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="101.0" layoutY="261.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/veg%20pizza.jpg" />
+                  <Image url="@image/veg_pizza.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="361.0" layoutY="261.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/pepperoni%20pizza.jpg" />
+                  <Image url="@image/pepperoni_pizza.jpg" />
                </image>
             </ImageView>
             <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
