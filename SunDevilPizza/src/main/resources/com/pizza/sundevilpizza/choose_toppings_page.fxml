@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.SceneController">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartUpController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -48,22 +48,22 @@
             </Button>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="207.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/mushrooms-.jpg" />
+                  <Image url="@image/mushrooms.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="291.0" layoutY="391.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/sliced-black-olives.jpg" />
+                  <Image url="@image/sliced-black-olives.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="495.0" layoutY="225.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/onions.jpg" />
+                  <Image url="@image/onions.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="112.0" fitWidth="200.0" layoutX="658.0" layoutY="411.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/cheese.jpg" />
+                  <Image url="@image/cheese.jpg" />
                </image>
             </ImageView>
             <Button layoutX="710.0" layoutY="531.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Extra Cheese +">
