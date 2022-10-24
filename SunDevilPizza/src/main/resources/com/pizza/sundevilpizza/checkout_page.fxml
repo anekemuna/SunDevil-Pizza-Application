@@ -33,7 +33,7 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label layoutX="282.0" layoutY="314.0" text="Toppings" textFill="WHITE">
+            <Label layoutX="282.0" layoutY="314.0" text="Toppings" textFill="#eb9fc8">
                <font>
                   <Font size="29.0" />
                </font>
@@ -63,7 +63,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="293.0" layoutY="469.0" text="Total" textFill="WHITE">
+            <Label layoutX="293.0" layoutY="469.0" text="Total" textFill="#e59ad1">
                <font>
                   <Font size="25.0" />
                </font>
@@ -80,16 +80,17 @@
                   <Font size="22.0" />
                </font>
             </Button>
-            <Label layoutX="231.0" layoutY="515.0" text="ASURITE Email ID" textFill="#ff2dae">
+            <Label layoutX="218.0" layoutY="513.0" text="ASURITE Email ID" textFill="#ed43ac">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="549.0" text="Example@asu.edu" textFill="#d794bf">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="231.0" layoutY="537.0" text="Example@asu.edu" textFill="#d794bf">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
+            <Line endX="69.77777099609375" layoutX="296.0" layoutY="548.0" startX="-87.55555725097656" stroke="WHITE" />
          </children></AnchorPane>
    </children>
 </StackPane>
