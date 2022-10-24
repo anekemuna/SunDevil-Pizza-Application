@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartupPage">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.CheckoutController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -75,7 +75,7 @@
             </Label>
             <Line endX="418.88885498046875" layoutX="282.0" layoutY="299.0" startX="-100.0" stroke="WHITE" />
             <Line endX="388.77777099609375" layoutX="322.0" layoutY="503.0" startX="-130.33334350585938" stroke="WHITE" />
-            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" text="Check Out" textFill="#9e185a">
+            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchToOrderStatus" text="Check Out" textFill="#9e185a">
                <font>
                   <Font size="22.0" />
                </font>
