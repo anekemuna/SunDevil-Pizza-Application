@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartupPage">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.SceneController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -28,7 +28,7 @@
                   <Font name="Comic Sans MS Bold" size="41.0" />
                </font>
             </Label>
-            <Button layoutX="246.0" layoutY="341.0" mnemonicParsing="false" text="Student" textFill="#070505">
+            <Button layoutX="246.0" layoutY="341.0" mnemonicParsing="false" onAction="#switchToCustomerPage" text="Student" textFill="#070505">
                <font>
                   <Font name="Comic Sans MS" size="21.0" />
                </font>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartupPage">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.SceneController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -42,7 +42,7 @@
                   <Image url="@../../../../../../../../../../Desktop/CSE%20360/pepperoni%20pizza.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" onAction="#display" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
+            <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
                <font>
                   <Font size="13.0" />
                </font>

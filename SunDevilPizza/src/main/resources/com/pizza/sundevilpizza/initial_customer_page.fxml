@@ -23,7 +23,7 @@
          </ImageView>
          <AnchorPane prefHeight="587.0" prefWidth="873.0">
             <children>
-                <Button layoutX="360.0" layoutY="344.0" onAction="#onHelloButtonClick" text="Place an Order" textFill="#828181">
+                <Button layoutX="360.0" layoutY="344.0" onAction="#switchToChoosePizza" text="Place an Order" textFill="#828181">
                   <font>
                      <Font name="Comic Sans MS" size="20.0" />
                   </font></Button>
