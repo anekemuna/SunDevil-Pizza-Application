@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartupPage">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.OrderStatusController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -26,6 +27,32 @@
                   <Font name="Comic Sans MS Bold" size="41.0" />
                </font>
             </Label>
+            <Label layoutX="358.0" layoutY="224.0" text="Order Status" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="411.0" layoutY="275.0" text="Accepted" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="411.0" layoutY="323.0" text="Ready to Cook" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="410.0" layoutY="374.0" text="Cooking" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="414.0" layoutY="433.0" text="Ready" textFill="#ff5d80">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Slider layoutX="357.0" layoutY="285.0" orientation="VERTICAL" prefHeight="186.0" prefWidth="44.0" value="10.0" />
          </children></AnchorPane>
    </children>
 </StackPane>
