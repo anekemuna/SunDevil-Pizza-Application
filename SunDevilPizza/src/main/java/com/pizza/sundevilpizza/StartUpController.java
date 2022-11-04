@@ -23,5 +23,13 @@ public class StartUpController {
     }
 
     // Link "Chef" Button to Next Scene
+    public void switchToChefPage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("passwordCheck.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader.load(), 900, 600);
+        stage.setTitle("SunDevil Pizza");
+        stage.setScene(scene);
+        stage.show();
+    }
     // Link "Processing Agent" Button to Next Scene
 }
