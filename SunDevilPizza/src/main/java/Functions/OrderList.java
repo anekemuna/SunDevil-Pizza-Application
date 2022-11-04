@@ -60,6 +60,15 @@ public class OrderList {
     }
 
     /**
+     * Access the order at an index
+     * @param index
+     * @return
+     */
+    public Order getOrder(int index){
+        return orderList.get(index);
+    }
+
+    /**
      * get the size of the orderList
      * @return
      */

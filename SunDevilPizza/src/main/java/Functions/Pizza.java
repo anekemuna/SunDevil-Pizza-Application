@@ -20,6 +20,7 @@ public class Pizza {
 
     /**
      * setter function for type
+     * type options are: "Veggie Delight", "Pepperoni Pizza", "Cheese Pizza"
      * @param orderType
      */
     public void setType(String orderType){
