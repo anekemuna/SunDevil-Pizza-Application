@@ -1,4 +1,7 @@
 //by YungLing Liu
+/**
+ * This class keeps track of order info
+ */
 package Functions;
 import Functions.Pizza;
 

@@ -1,4 +1,7 @@
 //by YungLing Liu
+/**
+ * This class keeps track of an order list. It has functions that manipulate the list and search in the list.
+ */
 package Functions;
 import java.util.ArrayList;
 import Functions.Order;

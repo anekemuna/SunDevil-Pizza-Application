@@ -1,4 +1,7 @@
 //by YungLing Liu
+/**
+ * This class keep track of pizza info
+ */
 package Functions;
 import java.util.ArrayList;
 

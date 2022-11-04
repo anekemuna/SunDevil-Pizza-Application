@@ -1,4 +1,8 @@
-//by YungLing Liu
+//by YungLing Liu and Romeo
+/**
+ * This class is the child class of Staff
+ * It implements functions specific to ProcessingAgent
+ */
 package Functions;
 
 public class ProcessingAgent extends Staff{
