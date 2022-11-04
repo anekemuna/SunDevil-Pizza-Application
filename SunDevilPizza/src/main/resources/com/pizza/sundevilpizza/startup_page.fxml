@@ -38,7 +38,7 @@
                   <Font name="Comic Sans MS" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="518.0" layoutY="340.0" mnemonicParsing="false" text="Processing Agent" textFill="#0d0808">
+            <Button layoutX="518.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToProcessingPage" text="Processing Agent" textFill="#0d0808">
                <font>
                   <Font name="Comic Sans MS" size="21.0" />
                </font>
