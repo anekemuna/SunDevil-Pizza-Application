@@ -5,18 +5,10 @@ package Functions;
 
 public class Customer extends SundevilPizza {
     private String name;
-    private String ASUID;
+    private String Asurite;
     private Pizza pizzaType;
-    private String[] toppings;
-    private Order order;
     public String status;
 
-    public void choosePizza(String type){
-        this.type = type;
-    }
-    public void chooseToppings(){
-
-    }
     public void setName(String inputName){
         name = inputName;
     }
@@ -34,5 +26,17 @@ public class Customer extends SundevilPizza {
     }
     public String getStatus(){
         return status;
+    }
+
+    public void choosePizza(Pizza type){
+        pizzaType = type;
+    }
+
+    public String getAsurite(){
+        return Asurite;
+    }
+
+    public void setAsurite(String asurite) {
+        Asurite = asurite;
     }
 }
