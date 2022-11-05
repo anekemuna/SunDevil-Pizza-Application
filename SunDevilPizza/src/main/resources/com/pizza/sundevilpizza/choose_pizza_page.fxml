@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.StartupPage">
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.ChoosePizzaController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -29,30 +29,30 @@
             </Label>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="615.0" layoutY="263.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/cheese%20pizza.jpg" />
+                  <Image url="@image/cheese_pizza.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="101.0" layoutY="261.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/veg%20pizza.jpg" />
+                  <Image url="@image/veg_pizza.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="361.0" layoutY="261.0">
                <image>
-                  <Image url="@../../../../../../../../../../Desktop/CSE%20360/pepperoni%20pizza.jpg" />
+                  <Image url="@image/pepperoni_pizza.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" onAction="#display" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
+            <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="411.0" layoutY="411.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="128.0" text="Pepperoni Pizza">
+            <Button layoutX="411.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="128.0" text="Pepperoni Pizza">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="667.0" layoutY="415.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Cheese Pizza">
+            <Button layoutX="667.0" layoutY="415.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="108.0" text="Cheese Pizza">
                <font>
                   <Font size="13.0" />
                </font>
