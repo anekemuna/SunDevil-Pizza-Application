@@ -64,6 +64,19 @@ public class Pizza {
     }
 
     /**
+     * return the list of toppings in the form of a string
+     * @return
+     */
+    public String getToppings(){
+
+        String toppingList = "";
+        for (int i = 0; i < toppings.size(); i++){
+            toppingList = toppingList  + toppings.get(i) + "    ";
+        }
+        return toppingList;
+    }
+
+    /**
      * print out the details of the pizza
      * output format
      * Pizza type: type

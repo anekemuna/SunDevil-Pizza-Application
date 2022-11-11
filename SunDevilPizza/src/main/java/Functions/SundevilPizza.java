@@ -12,7 +12,7 @@ import Functions.OrderList;
 import Functions.Pizza;
 
 public class SundevilPizza {
-    protected OrderList list = new OrderList();
+    protected static OrderList list = new OrderList();
 
 
     /**
