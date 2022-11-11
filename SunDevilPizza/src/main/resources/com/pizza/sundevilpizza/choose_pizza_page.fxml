@@ -57,6 +57,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
+            <Button layoutX="51.0" layoutY="36.0" mnemonicParsing="false" text="Back" />
          </children></AnchorPane>
    </children>
 </StackPane>
