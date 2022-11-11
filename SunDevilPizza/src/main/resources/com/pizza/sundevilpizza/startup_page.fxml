@@ -36,7 +36,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button layoutX="408.0" layoutY="340.0" mnemonicParsing="false" text="Chef" textFill="#070303">
+            <Button layoutX="408.0" layoutY="340.0" mnemonicParsing="false" onAction="#toChefPage" text="Chef" textFill="#070303">
                <font>
                   <Font name="Comic Sans MS" size="21.0" />
                </font>

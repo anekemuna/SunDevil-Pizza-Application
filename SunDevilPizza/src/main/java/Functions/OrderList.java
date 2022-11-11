@@ -8,7 +8,7 @@ import Functions.Order;
 import Functions.Pizza;
 
 public class OrderList {
-    private static ArrayList<Order> orderList;
+    private ArrayList<Order> orderList;
 
     /**
      * Constructor to instantiate orderList
