@@ -49,22 +49,22 @@
                </image>
             </ImageView>
             <Button layoutX="50.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToPizzaPage" text="Back" />
-            <CheckBox layoutX="118.0" layoutY="353.0" mnemonicParsing="false" text="Mushroom" textFill="WHITE">
+            <CheckBox fx:id="checkbox_1" layoutX="118.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Mushroom" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="366.0" layoutY="531.0" mnemonicParsing="false" text="Olive" textFill="WHITE">
+            <CheckBox fx:id="checkbox_3" layoutX="366.0" layoutY="531.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Olive" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="558.0" layoutY="366.0" mnemonicParsing="false" text="Onion" textFill="WHITE">
+            <CheckBox fx:id="checkbox_2" layoutX="558.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Onion" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="720.0" layoutY="527.0" mnemonicParsing="false" text="Extra Cheese" textFill="WHITE">
+            <CheckBox fx:id="checkbox_4" layoutX="720.0" layoutY="527.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Extra Cheese" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

@@ -1,25 +1,32 @@
 package com.pizza.sundevilpizza;
 
+import Functions.Order;
+import Functions.Pizza;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class CheckoutController {
     private Stage stage;
     private Scene scene;
-
-
+    private Pizza newPizza;
+    private ChooseToppingsController pizzaToppingControl;
     @FXML
-    public void initialize() {
+    private Label pizza_name;
+    
 
 
-
-    }
+    /*public void CheckoutController(ActionEvent event) throws IOException {
+        newPizza = pizzaToppingControl.getPizza();
+        pizza_name.setText(newPizza.getType());
+    }*/
 
     // Link "Student" Button to Next Scene
     public void switchToOrderStatus(ActionEvent event) throws IOException {
@@ -39,4 +46,5 @@ public class CheckoutController {
         stage.setScene(scene);
         stage.show();
     }
+
 }
