@@ -95,4 +95,11 @@ public class Pizza {
         }
     }
 
+
+    // Added By Muna
+    public ArrayList<String> returnToppingList()
+    {
+        return toppings;
+    }
+
 }

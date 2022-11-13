@@ -11,27 +11,27 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ChoosePizzaController {
-
     private Stage stage;
     private Scene scene;
-
     private Pizza newPizza;
+
+    public void ChoosePizzaController() // constructor- might remove
+    {}
 
     // Link any pizza Button to Next Scene
     public void switchToToppingPage(ActionEvent event) throws IOException {
-        // handle button event
-        String pizzatype = ((Button)event.getSource()).getText();
 
+        // handle button event
+        String pizzaType = ((Button)event.getSource()).getText();
         newPizza = new Pizza();
-        newPizza.setType(pizzatype);
+        newPizza.setType(pizzaType);  // set pizza name to selected button
 
         // switch to next page
         FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("choose_toppings_page.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("SunDevil Pizza");
-        /***/
-        stage.setUserData(newPizza);
+        stage.setUserData(newPizza); // store newPizza data for next scene
         stage.setScene(scene);
         stage.show();
     }
@@ -45,8 +45,4 @@ public class ChoosePizzaController {
         stage.show();
     }
 
-    public Pizza getPizza()
-    {
-        return newPizza;
-    }
 }

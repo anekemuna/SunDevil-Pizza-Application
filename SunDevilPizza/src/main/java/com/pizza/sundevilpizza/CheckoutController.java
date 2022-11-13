@@ -17,16 +17,43 @@ public class CheckoutController {
     private Stage stage;
     private Scene scene;
     private Pizza newPizza;
-    private ChooseToppingsController pizzaToppingControl;
+
     @FXML
     private Label pizza_name;
+    @FXML
+    private Label topping_1;
+    @FXML
+    private Label topping_2;
+    @FXML
+    private Label topping_3;
+    @FXML
+    private Label topping_4;
+
+    @FXML
+    private Label topping_price1;
+    @FXML
+    private Label topping_price2;
+    @FXML
+    private Label topping_price3;
+    @FXML
+    private Label topping_price4;
 
 
 
-    public void setCheckoutLabel(String text) {
-        //newPizza = pizzaToppingControl.getPizza();
-        //pizza_name.setText(newPizza.getType());
-        pizza_name.setText(text);
+    public void setCheckoutPizza(Pizza pizza) {
+        newPizza = pizza;
+
+        pizza_name.setText(newPizza.getType());
+
+        if(!newPizza.returnToppingList().isEmpty())
+        {
+            switch(newPizza.returnToppingList().size()) {
+                case 1:
+                    topping_1.setText(newPizza.returnToppingList().get(1));
+                    top
+            }
+
+        }
     }
 
 

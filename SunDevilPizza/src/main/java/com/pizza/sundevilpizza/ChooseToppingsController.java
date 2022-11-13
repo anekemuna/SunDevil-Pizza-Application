@@ -1,9 +1,7 @@
 package com.pizza.sundevilpizza;
 
-import Functions.Order;
 import Functions.Pizza;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -16,7 +14,6 @@ public class ChooseToppingsController {
     private Stage stage;
     private Scene scene;
     private Pizza newPizza;
-    private ChoosePizzaController pizzaControl;
 
 
     // Link "Student" Button to Next Scene
@@ -26,12 +23,12 @@ public class ChooseToppingsController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         //stage.setTitle("SunDevil Pizza");
-        /***/
-        //stage.setUserData(newPizza);
-        CheckoutController control = fxmlLoader.getController();
-        control.setCheckoutLabel(newPizza.getType());
 
-        /***/
+        // set Pizza Labels for CheckOutPage
+        CheckoutController control = fxmlLoader.getController();
+        control.setCheckoutPizza(newPizza); // set pizza for checkout page
+
+
         stage.setScene(scene);
         //stage.show();
     }
@@ -62,8 +59,4 @@ public class ChooseToppingsController {
        // what happens if no pizza topping
    }
 
-    public Pizza getPizza()
-    {
-        return newPizza;
-    }
 }
