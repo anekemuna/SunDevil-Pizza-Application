@@ -56,8 +56,7 @@ public class ChooseToppingsController {
            newPizza.returnToppingList().remove(box.getText());
        }
         //newPizza.printPizza();
-       // might need to add a removeToppings() to Pizza: inCase a customer changes their minds
-       // what happens if no pizza topping
+
    }
 
     public void setPizza(Pizza pizza){

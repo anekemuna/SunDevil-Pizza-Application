@@ -15,9 +15,6 @@ public class ChoosePizzaController {
     private Scene scene;
     private Pizza newPizza;
 
-    public void ChoosePizzaController() // constructor- might remove
-    {}
-
     // Link any pizza Button to Next Scene
     public void switchToToppingPage(ActionEvent event) throws IOException {
 
