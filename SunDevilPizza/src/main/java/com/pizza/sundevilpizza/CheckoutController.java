@@ -37,23 +37,70 @@ public class CheckoutController {
     private Label topping_price3;
     @FXML
     private Label topping_price4;
+    @FXML
+    private Label total_price;
 
 
 
     public void setCheckoutPizza(Pizza pizza) {
-        newPizza = pizza;
+        newPizza = pizza; // set pizza
 
+        // set label values
         pizza_name.setText(newPizza.getType());
 
+        // fix topping labels
         if(!newPizza.returnToppingList().isEmpty())
         {
             switch(newPizza.returnToppingList().size()) {
                 case 1:
-                    topping_1.setText(newPizza.returnToppingList().get(1));
-                    top
+                    topping_1.setText(newPizza.returnToppingList().get(0));
+                    topping_price1.setText("$1.50");
+                    topping_2.setText("");
+                    topping_price2.setText("");
+                    topping_3.setText("");
+                    topping_price3.setText("");
+                    topping_4.setText("");
+                    topping_price4.setText("");
+                    break;
+                case 2:
+                    topping_1.setText(newPizza.returnToppingList().get(0));
+                    topping_price1.setText("$1.50");
+                    topping_2.setText(newPizza.returnToppingList().get(1));
+                    topping_price2.setText("$1.50");
+                    topping_3.setText("");
+                    topping_price3.setText("");
+                    topping_4.setText("");
+                    topping_price4.setText("");
+                    break;
+                case 3:
+                    topping_1.setText(newPizza.returnToppingList().get(0));
+                    topping_price1.setText("$1.50");
+                    topping_2.setText(newPizza.returnToppingList().get(1));
+                    topping_price2.setText("$1.50");
+                    topping_1.setText(newPizza.returnToppingList().get(2));
+                    topping_price3.setText("$1.50");
+                    topping_4.setText("");
+                    topping_price4.setText("");
+                    break;
+                case 4:
+                    topping_1.setText(newPizza.returnToppingList().get(0));
+                    topping_price1.setText("$1.50");
+                    topping_2.setText(newPizza.returnToppingList().get(1));
+                    topping_price2.setText("$1.50");
+                    topping_3.setText(newPizza.returnToppingList().get(2));
+                    topping_price3.setText("$1.50");
+                    topping_4.setText(newPizza.returnToppingList().get(3));
+                    topping_price4.setText("$1.50");
+                    break;
+                default:
+                    break;
             }
 
         }
+
+       
+
+
     }
 
 

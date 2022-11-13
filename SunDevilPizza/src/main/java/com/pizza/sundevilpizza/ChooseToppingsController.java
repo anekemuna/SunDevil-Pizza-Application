@@ -43,8 +43,6 @@ public class ChooseToppingsController {
     }
 
    public void handleCheckBox(ActionEvent event) throws IOException {
-        //pizzaControl = new ChoosePizzaController();
-        //newPizza = pizzaControl.getPizza();
        Node node = (Node) event.getSource();
        Stage stage = (Stage) node.getScene().getWindow();
        newPizza = (Pizza) stage.getUserData();
