@@ -98,7 +98,10 @@ public class CheckoutController {
 
         }
 
-       
+        // total price label
+        double price = 20.00 + (newPizza.returnToppingList().size() * 1.50);
+        String str_price
+        total_price.setText(String.valueOf(price));
 
 
     }
