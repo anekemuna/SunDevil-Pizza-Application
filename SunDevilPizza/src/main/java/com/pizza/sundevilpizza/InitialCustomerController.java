@@ -1,5 +1,6 @@
 package com.pizza.sundevilpizza;
 
+import Functions.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +12,8 @@ import java.io.IOException;
 public class InitialCustomerController {
     private Stage stage;
     private Scene scene;
+
+
 
     // Link Place Order Button to Next Scene
     public void switchToChoosePizza(ActionEvent event) throws IOException {

@@ -3,21 +3,44 @@
  */
 package Functions;
 
-public class Customer extends SundevilPizza {
+public class Customer{
+
     private String name;
     private String Asurite;
     private Pizza pizzaType;
     public String status;
 
+    private Order order;
+
+
+    /**
+     *
+     * @param inputName name of customer
+     */
     public void setName(String inputName){
         name = inputName;
     }
+
+    /**
+     *
+     * @return name customer's name
+     */
     public String getName(){
         return name;
     }
+
+    /**
+     *
+     * @param inputPizza type of pizza the customer wants
+     */
     public void setPizza(Pizza inputPizza){
         pizzaType = inputPizza;
     }
+
+    /**
+     *
+     * @return pizzaType 
+     */
     public Pizza getPizza(){
         return pizzaType;
     }
