@@ -14,6 +14,17 @@ public class CustomerList {
         customerList.add(newCustomer);
     }
     public Customer getCustomer(int index){
+
         return customerList.get(index);
+    }
+    public int findCustomer(String inputName){
+        for(int i = 0; i < customerList.size(); i++){
+            String current = customerList.get(i).getName();
+            if (current.equals(inputName)){
+                return i;
+            }
+        }
+        System.out.println("Customer not found");
+        return -1;
     }
 }
