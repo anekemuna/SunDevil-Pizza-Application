@@ -17,6 +17,7 @@ public class passwordCheckController {
 
     @FXML
     private TextField passwordInput;
+    private TextField password;
 
     // Back: go to welcome page
     public void toWelcomPage(ActionEvent event) throws IOException {
@@ -55,4 +56,20 @@ public class passwordCheckController {
 
     }
     // Link "Processing Agent" Button to Next Scene
+    public void submitProcess(ActionEvent event) throws IOException {
+        String input = password.getText();
+        if (input.equals("pizza")) {
+            FXMLLoader fxmlLoader2 = new FXMLLoader(SunDevilPizzaApplication.class.getResource("orderProcess.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(fxmlLoader2.load(), 900, 600);
+            stage.setTitle("SunDevil Pizza");
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            password.clear();
+            password.setPromptText("Incorrect Password");
+        }
+
+
+    }
 }
