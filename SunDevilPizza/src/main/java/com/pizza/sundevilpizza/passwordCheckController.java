@@ -17,6 +17,7 @@ public class passwordCheckController {
 
     @FXML
     private TextField passwordInput;
+    @FXML
     private TextField password;
 
     // Back: go to welcome page
