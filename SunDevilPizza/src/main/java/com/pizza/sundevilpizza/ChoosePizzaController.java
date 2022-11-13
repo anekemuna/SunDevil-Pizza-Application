@@ -31,7 +31,10 @@ public class ChoosePizzaController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("SunDevil Pizza");
-        stage.setUserData(newPizza); // store newPizza data for next scene
+        //stage.setUserData(newPizza); // store newPizza data for next scene
+        newPizza.removeToppings();
+        ChooseToppingsController control = fxmlLoader.getController();
+        control.setPizza(newPizza); // set pizza for checkout page
         stage.setScene(scene);
         stage.show();
     }
@@ -44,5 +47,6 @@ public class ChoosePizzaController {
         stage.setScene(scene);
         stage.show();
     }
+
 
 }

@@ -102,4 +102,9 @@ public class Pizza {
         return toppings;
     }
 
+    public void removeToppings ()
+    {
+        toppings.clear();
+    }
+
 }

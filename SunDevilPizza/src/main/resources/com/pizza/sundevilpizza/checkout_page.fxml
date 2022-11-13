@@ -38,12 +38,12 @@
                   <Font size="29.0" />
                </font>
             </Label>
-            <Label fx:id="topping_1" layoutX="282.0" layoutY="298.0" text="Cheese" textFill="WHITE">
+            <Label fx:id="topping_1" layoutX="282.0" layoutY="298.0" prefHeight="34.0" prefWidth="119.0" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label fx:id="topping_2" layoutX="281.0" layoutY="340.0" text="Mushroom" textFill="#fffefe">
+            <Label fx:id="topping_2" layoutX="281.0" layoutY="340.0" prefHeight="32.0" prefWidth="131.0" textFill="#fffefe">
                <font>
                   <Font size="22.0" />
                </font>
@@ -53,12 +53,12 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="topping_price1" layoutX="552.0" layoutY="301.0" text="1.50" textFill="WHITE">
+            <Label fx:id="topping_price1" layoutX="552.0" layoutY="301.0" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="topping_price2" layoutX="554.0" layoutY="343.0" text="1.50" textFill="WHITE">
+            <Label fx:id="topping_price2" layoutX="554.0" layoutY="343.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label fx:id="total_price" layoutX="539.0" layoutY="460.0" text="\$23.00" textFill="WHITE">
+            <Label fx:id="total_price" layoutX="539.0" layoutY="460.0" text="\$0.00" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
@@ -92,22 +92,22 @@
             </Label>
             <Line endX="69.77777099609375" layoutX="296.0" layoutY="548.0" startX="-87.55555725097656" stroke="WHITE" />
             <Button layoutX="51.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToToppingsPage" text="Back" />
-            <Label fx:id="topping_3" layoutX="280.0" layoutY="377.0" prefHeight="1.0" prefWidth="61.0" text="Olive" textFill="WHITE">
+            <Label fx:id="topping_3" layoutX="280.0" layoutY="377.0" prefHeight="34.0" prefWidth="119.0" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label fx:id="topping_price3" layoutX="556.0" layoutY="381.0" text="1.50" textFill="WHITE">
+            <Label fx:id="topping_price3" layoutX="556.0" layoutY="381.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="topping_4" layoutX="284.0" layoutY="418.0" prefHeight="34.0" prefWidth="73.0" text="Onion" textFill="WHITE">
+            <Label fx:id="topping_4" layoutX="284.0" layoutY="418.0" prefHeight="34.0" prefWidth="119.0" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label fx:id="topping_price4" layoutX="554.0" layoutY="422.0" text="1.50" textFill="WHITE">
+            <Label fx:id="topping_price4" layoutX="554.0" layoutY="422.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

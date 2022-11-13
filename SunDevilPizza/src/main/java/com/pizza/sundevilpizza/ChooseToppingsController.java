@@ -42,19 +42,26 @@ public class ChooseToppingsController {
         //stage.show();
     }
 
-   public void handleCheckBox(ActionEvent event) throws IOException {
-       Node node = (Node) event.getSource();
-       Stage stage = (Stage) node.getScene().getWindow();
-       newPizza = (Pizza) stage.getUserData();
+   public void handleCheckBox(ActionEvent event) throws IOException {Node node = (Node) event.getSource();
+       /*Stage stage = (Stage) node.getScene().getWindow();
+       newPizza = (Pizza) stage.getUserData();*/
        CheckBox box = (CheckBox) event.getSource();
 
        if(box.isSelected())
        {
            newPizza.addToppings(box.getText());
        }
+       else if(!box.isSelected()) // remove unselected
+       {
+           newPizza.returnToppingList().remove(box.getText());
+       }
 
        // might need to add a removeToppings() to Pizza: inCase a customer changes their minds
        // what happens if no pizza topping
    }
+
+    public void setPizza(Pizza pizza){
+        newPizza = pizza;
+    }
 
 }

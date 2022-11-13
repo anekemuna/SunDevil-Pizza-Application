@@ -1,6 +1,5 @@
 package com.pizza.sundevilpizza;
 
-import Functions.Order;
 import Functions.Pizza;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -77,7 +76,7 @@ public class CheckoutController {
                     topping_price1.setText("$1.50");
                     topping_2.setText(newPizza.returnToppingList().get(1));
                     topping_price2.setText("$1.50");
-                    topping_1.setText(newPizza.returnToppingList().get(2));
+                    topping_3.setText(newPizza.returnToppingList().get(2));
                     topping_price3.setText("$1.50");
                     topping_4.setText("");
                     topping_price4.setText("");
@@ -100,8 +99,8 @@ public class CheckoutController {
 
         // total price label
         double price = 20.00 + (newPizza.returnToppingList().size() * 1.50);
-        String str_price
-        total_price.setText(String.valueOf(price));
+        String str_price = String.format("$%.2f",price);
+        total_price.setText(str_price);
 
 
     }
@@ -122,8 +121,17 @@ public class CheckoutController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("SunDevil Pizza");
+
+        // set Pizza Labels for CheckOutPage
+        newPizza.removeToppings();
+        ChooseToppingsController control = fxmlLoader.getController();
+        control.setPizza(newPizza); // set pizza for checkout page
+
+
+        stage.setUserData(newPizza); // store newPizza data for next scene
         stage.setScene(scene);
         stage.show();
     }
+
 
 }
