@@ -10,6 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class LoginCheckoutController {
@@ -21,6 +24,9 @@ public class LoginCheckoutController {
     private TextField asurite_field;
     @FXML
     private PasswordField password_field;
+
+    private String strPassword;
+    private String strAsurite;
 
 
     public void backToCheckout(ActionEvent event) throws IOException {
@@ -38,6 +44,15 @@ public class LoginCheckoutController {
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
+        FileReader in = new FileReader("data/StudentPasswords.txt");
+        BufferedReader br = new BufferedReader(in);
+        String line;
+        while ((line = br.readLine()) != null) {
+            if(line.contains(" "))
+                System.out.println(line);
+        }
+        in.close();
+
 
 
     }
@@ -45,4 +60,5 @@ public class LoginCheckoutController {
     public void setPizza(Pizza pizza){
         newPizza = pizza;
     }
+
 }
