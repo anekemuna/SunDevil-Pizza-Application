@@ -61,6 +61,12 @@ public class Pizza {
      */
     public void addToppings(String inputTopping){
         toppings.add(inputTopping);
+
+        // add price
+        double price = 1.50 * toppings.size();
+        price += 20.00; // price of pizza
+        setPrice(price);
+
     }
 
     /**
@@ -97,14 +103,17 @@ public class Pizza {
 
 
     // Added By Muna
-    public ArrayList<String> returnToppingList()
+    public ArrayList<String> returnToppingList() // return toppings list
     {
         return toppings;
     }
 
-    public void removeToppings ()
+    public void removeToppings ()  // clear topping list
     {
         toppings.clear();
+
+        // update price
+        setPrice(20.0); // price of pizza
     }
 
 }
