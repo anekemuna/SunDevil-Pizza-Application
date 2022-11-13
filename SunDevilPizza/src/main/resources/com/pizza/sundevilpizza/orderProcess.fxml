@@ -37,7 +37,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.processingAgentController">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.prcoController">
   <children>
     <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
@@ -64,7 +64,7 @@
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Order Details" textAlignment="CENTER" textFill="$x2" underline="true" wrapText="false" />
                   <ButtonBar layoutX="435.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                      <Button fx:id="sendToChef" defaultButton="true" mnemonicParsing="false" onAction="#chefReady" prefHeight="32.0" prefWidth="139.0" text="Ready to Cook!" textFill="WHITE" />
+                      <Button fx:id="sendToChef" defaultButton="true" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" text="Ready to Cook!" textFill="WHITE" />
                     </buttons>
                   </ButtonBar>
                   <TextArea layoutX="19.0" layoutY="49.0" prefHeight="477.0" prefWidth="616.0" />
