@@ -13,49 +13,28 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-
 public class passwordController {
     private Stage stage;
     private Scene scene;
-    public passwordController() {
-
-    }
-
-    @FXML
-    private Button login;
-    @FXML
-    private Label wrongLogin;
-    @FXML
-    private TextField username;
     @FXML
     private PasswordField password;
 
-    // This is a password check function that is a work in progress, it must be implemented into main
-/*    public void passwordController(ActionEvent event) throws IOException {
-        checkLogin();
-    }
-
-  private void checkLogin() throws IOException {
-        Main m = new Main();
-        if(username.getText.toString().equals("rom2132897") && password.getText.toString(equals("123"))) {
-          wrongLogin.setText("Welcome! Your food awaits!");
-
-          FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
-      }
-        else if(username.getText.isEmpty() && password.getText.isEmpty()) {
-            wrongLogin.setText("User ID and Password is required. Please try again!");
+    public void submitProcess(ActionEvent event) throws IOException {
+        String input = password.getText();
+        if (input.equals("pizza")) {
+            FXMLLoader fxmlLoader2 = new FXMLLoader(SunDevilPizzaApplication.class.getResource("orderProcess.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(fxmlLoader2.load(), 900, 600);
+            stage.setTitle("SunDevil Pizza");
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            password.clear();
+            password.setPromptText("Incorrect Password");
         }
 
-        else{
-            wrongLogin.setText("Invalid ASURITE User ID or Password! Please try again.");
-      }
-  }*/
 
-
-
-
-
-
+    }
 }
 
 
