@@ -27,7 +27,11 @@ public class ChooseToppingsController {
         scene = new Scene(fxmlLoader.load(), 900, 600);
         //stage.setTitle("SunDevil Pizza");
         /***/
-        stage.setUserData(newPizza);
+        //stage.setUserData(newPizza);
+        CheckoutController control = fxmlLoader.getController();
+        control.setCheckoutLabel(newPizza.getType());
+
+        /***/
         stage.setScene(scene);
         //stage.show();
     }
@@ -55,6 +59,7 @@ public class ChooseToppingsController {
        }
 
        // might need to add a removeToppings() to Pizza: inCase a customer changes their minds
+       // what happens if no pizza topping
    }
 
     public Pizza getPizza()

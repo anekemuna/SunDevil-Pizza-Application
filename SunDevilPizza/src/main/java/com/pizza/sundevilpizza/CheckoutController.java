@@ -20,13 +20,15 @@ public class CheckoutController {
     private ChooseToppingsController pizzaToppingControl;
     @FXML
     private Label pizza_name;
-    
 
 
-    /*public void CheckoutController(ActionEvent event) throws IOException {
-        newPizza = pizzaToppingControl.getPizza();
-        pizza_name.setText(newPizza.getType());
-    }*/
+
+    public void setCheckoutLabel(String text) {
+        //newPizza = pizzaToppingControl.getPizza();
+        //pizza_name.setText(newPizza.getType());
+        pizza_name.setText(text);
+    }
+
 
     // Link "Student" Button to Next Scene
     public void switchToOrderStatus(ActionEvent event) throws IOException {
