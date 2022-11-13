@@ -107,10 +107,15 @@ public class CheckoutController {
 
 
     // Link "Student" Button to Next Scene
-    public void switchToOrderStatus(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
+    public void switchToLogin(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("login_page_checkout.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(fxmlLoader.load(), 900, 600);
+
+        // pass pizza object to next scene
+        LoginCheckoutController control = fxmlLoader.getController();
+        control.setPizza(newPizza); // set pizza for next page
+
         stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);
         stage.show();
