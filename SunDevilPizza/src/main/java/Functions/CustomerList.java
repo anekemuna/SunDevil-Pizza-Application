@@ -33,4 +33,7 @@ public class CustomerList {
             customerList.remove(index);
         }
     }
+    public void deleteCustomer(int index) {
+        customerList.remove(index);
+    }
 }
