@@ -27,4 +27,10 @@ public class CustomerList {
         System.out.println("Customer not found");
         return -1;
     }
+    public void deleteCustomer(String inputName){
+        int index = findCustomer(inputName);
+        if (index != -1){
+            customerList.remove(index);
+        }
+    }
 }
