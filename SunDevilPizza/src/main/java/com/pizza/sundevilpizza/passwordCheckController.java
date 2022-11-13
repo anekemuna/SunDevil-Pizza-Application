@@ -57,6 +57,9 @@ public class passwordCheckController {
 
     }
     // Link "Processing Agent" Button to Next Scene
+    // This is a Processing Agent password check button
+    // If the password is incorrect, the password field will display 'Incorrect Password'
+    // If the password is correct, the submit button will re-direct the processing agent to the order queue window.
     public void submitProcess(ActionEvent event) throws IOException {
         String input = password.getText();
         if (input.equals("pizza")) {
