@@ -18,7 +18,7 @@ public class LoginCheckoutController {
     private Scene scene;
     private Pizza newPizza;
     @FXML
-    private PasswordField asurite_field;
+    private TextField asurite_field;
     @FXML
     private PasswordField password_field;
 
