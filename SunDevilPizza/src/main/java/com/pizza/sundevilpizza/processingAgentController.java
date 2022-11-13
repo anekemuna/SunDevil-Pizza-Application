@@ -19,6 +19,17 @@ public class processingAgentController extends Staff {
     @FXML
     private Button sendToChef;
 
+    // Implementing table population using Order class
+    @FXML
+    private TableView<Order> table;
+
+    @FXML
+    private TableView<Order> name;
+
+    @FXML
+    private TableView<Order> pizza;
+
+
     public void chefReady(ActionEvent event) throws IOException {
         changeStatus(inputName, "Ready to Cook");
         sendToChef(Order order);
