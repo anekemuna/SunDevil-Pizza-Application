@@ -6,7 +6,7 @@ package Functions;
 import java.util.ArrayList;
 
 public class OrderList {
-    private ArrayList<Order> orderList;
+    private final ArrayList<Order> orderList;
 
     /**
      * Constructor to instantiate orderList
