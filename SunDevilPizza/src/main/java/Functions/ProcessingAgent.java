@@ -1,4 +1,4 @@
-//by YungLing Liu and Romeo
+//by YungLing Liu and Romeo Barrientos
 /**
  * This class is the child class of Staff
  * It implements functions specific to ProcessingAgent
