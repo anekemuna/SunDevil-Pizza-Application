@@ -32,4 +32,12 @@ public class StartUpController {
         stage.show();
     }
     // Link "Processing Agent" Button to Next Scene
+    public void toProcessingAgent(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader2 = new FXMLLoader(SunDevilPizzaApplication.class.getResource("processingAgent.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader2.load(), 900, 600);
+        stage.setTitle("SunDevil Pizza");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
