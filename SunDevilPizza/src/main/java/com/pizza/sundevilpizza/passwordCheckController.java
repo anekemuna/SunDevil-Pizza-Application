@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -19,6 +20,9 @@ public class passwordCheckController {
     private TextField passwordInput;
     @FXML
     private TextField password;
+
+    @FXML
+    private Button back;
 
     // Back: go to welcome page
     public void toWelcomPage(ActionEvent event) throws IOException {
