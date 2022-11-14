@@ -1,6 +1,6 @@
 package com.pizza.sundevilpizza;
 
-import Functions.Pizza;
+import Functions.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LoginCheckoutController {
+public class LoginCheckoutController extends Customer{
     private Stage stage;
 
     private Scene scene;
@@ -27,6 +27,7 @@ public class LoginCheckoutController {
 
     private String strPassword;
     private String strAsurite;
+    private Order newOrder;
 
 
     public void backToCheckout(ActionEvent event) throws IOException {
@@ -66,8 +67,17 @@ public class LoginCheckoutController {
 
         if(flag)
         {
-            System.out.println(strAsurite + "  " + strPassword);
             error_label.setText("");
+
+            //create order
+            newOrder = new Order();
+            newOrder.setName(strAsurite);
+            newOrder.setPizza(newPizza);
+            newOrder.setStatus("Ready to Cook");
+
+            list.addOrder(newOrder);
+
+
         }
         else
         {

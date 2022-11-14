@@ -48,6 +48,7 @@
                      <Font name="Comic Sans MS" size="20.0" />
                   </font>
                </Button>
+               <Button layoutX="56.0" layoutY="61.0" mnemonicParsing="false" onAction="#backtoStartup" text="Back" />
             </children>
          </AnchorPane>
       </children>
