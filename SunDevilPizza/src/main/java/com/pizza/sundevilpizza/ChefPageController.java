@@ -37,19 +37,11 @@ public class ChefPageController extends Staff {
      */
     @FXML
     public void initialize() {
-        //In order to test the functionality of chef page, I added 3 orders to the list. Delete the for loop after everything is fully implemented!
-        for (int i = 0; i < 3; i++){
-            Order order = new Order();
-            order.setName("Order" + i);
-            order.setStatus("Cooking");
-            Pizza newPizza = new Pizza();
-            newPizza.setType("Cheese");
-            newPizza.addToppings("Mushroom");
-            newPizza.addToppings("Extra Cheese");
-            order.setPizza(newPizza);
 
-            listForChef.addOrder(order);
-            list.addOrder(order);
+        // remove if Romeo fixes processing agent
+        for(int i = 0; i < list.getSize(); i++)
+        {
+            listForChef.addOrder(list.getOrder(0));
         }
 
         loadOrder();

@@ -72,7 +72,7 @@
             </Label>
             <Line endX="418.88885498046875" layoutX="278.0" layoutY="234.0" startX="-100.0" stroke="WHITE" />
             <Line endX="388.77777099609375" layoutX="319.0" layoutY="496.0" startX="-130.33334350585938" stroke="WHITE" />
-            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchToOrderStatus" text="Check Out" textFill="#9e185a">
+            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchToLogin" text="Check Out" textFill="#9e185a">
                <font>
                   <Font size="22.0" />
                </font>

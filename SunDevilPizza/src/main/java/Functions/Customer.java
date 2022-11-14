@@ -3,7 +3,7 @@
  */
 package Functions;
 
-public class Customer{
+public class Customer extends SundevilPizza{
 
     private String name;
     private String Asurite;

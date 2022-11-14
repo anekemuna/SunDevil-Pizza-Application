@@ -4,11 +4,9 @@
  */
 package Functions;
 import java.util.ArrayList;
-import Functions.Order;
-import Functions.Pizza;
 
 public class OrderList {
-    private ArrayList<Order> orderList;
+    private final ArrayList<Order> orderList;
 
     /**
      * Constructor to instantiate orderList

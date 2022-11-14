@@ -1,73 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
-  All rights reserved. Use is subject to license terms.
-
-  This file is available and licensed under the following license:
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions
-  are met:
-
-  - Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-  - Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the distribution.
-  - Neither the name of Oracle Corporation nor the names of its
-    contributors may be used to endorse or promote products derived
-    from this software without specific prior written permission.
-
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.processingAgentController">
   <children>
-    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane prefHeight="598.0" prefWidth="312.0">
-          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Order Queue" textAlignment="CENTER" underline="true" wrapText="false">
-              <font>
-                <Font size="18.0" fx:id="x1" />
-              </font>
-              <textFill>
-                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
-              </textFill>
-            </Label>
-                  <TableView layoutX="11.0" layoutY="49.0" prefHeight="545.0" prefWidth="200.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" sortType="DESCENDING" text="Order #" />
-                      <TableColumn prefWidth="75.0" sortType="DESCENDING" text="ASURITE ID" />
-                    </columns>
-                  </TableView>
-          </children>
-        </AnchorPane>
         <AnchorPane prefHeight="598.0" prefWidth="478.0">
           <children>
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Order Details" textAlignment="CENTER" textFill="$x2" underline="true" wrapText="false" />
-                  <ButtonBar layoutX="435.0" layoutY="544.0" prefHeight="40.0" prefWidth="200.0">
-                    <buttons>
-                      <Button defaultButton="true" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" text="Ready to Cook!" textFill="WHITE" />
-                    </buttons>
-                  </ButtonBar>
-                  <TextArea layoutX="19.0" layoutY="49.0" prefHeight="477.0" prefWidth="616.0" />
+            <Label alignment="CENTER" layoutX="19.0" layoutY="14.0" style="&#10;" text="Order Details" textAlignment="CENTER" underline="true" wrapText="false">
+                     <font>
+                <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+                     </textFill></Label>
+                  <ListView layoutX="19.0" layoutY="41.0" prefHeight="489.0" prefWidth="855.0" />
+                  <Pane layoutX="25.0" layoutY="49.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="25.0" layoutY="128.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="25.0" layoutY="260.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="28.0" layoutY="207.0" prefHeight="79.0" prefWidth="843.0" />
+            <Button fx:id="back" layoutX="385.0" layoutY="533.0" mnemonicParsing="false" onAction="#toWelcomePage" prefHeight="32.0" prefWidth="130.0" text="Back">
+              <font>
+                <Font size="24.0" />
+              </font>
+            </Button>
           </children>
         </AnchorPane>
       </items>
