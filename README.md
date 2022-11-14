@@ -1,4 +1,4 @@
-# SunDexil Pizza
+# SunDevil Pizza
 SunDevil Pizza is a web application used by the students of Arizona State University to order their favourite pizzas online and get them on their doorstep in the quickest manner possible. This Application has three parts to it. 
 The user part, the order processing agent part, and the chef part. 
 
