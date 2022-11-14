@@ -21,14 +21,17 @@ public class processingAgentController extends ProcessingAgent {
 
     private Scene scene;
 
-    @FXML
-    private Button sendToChef;
 
     @FXML
     private Button back;
 
     @FXML
     private ListView processList;
+
+    @FXML
+    public void initialize() {
+        customerOrder();
+    }
 
 
     public Pane orderPane(String inputName, String inputPizzaType, String inputToppings){
@@ -63,6 +66,8 @@ public class processingAgentController extends ProcessingAgent {
                 changeStatus(inputName, "Cooking");
                 int index = list.findOrder(inputName);
                 sendToChef(list.getOrder(index));
+                list.deleteOrder(inputName);
+                processList.getItems().clear();
                 customerOrder();
             }
         });

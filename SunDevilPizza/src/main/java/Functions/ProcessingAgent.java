@@ -16,4 +16,9 @@ public class ProcessingAgent extends Staff{
     public void sendToChef(Order order){
         listForChef.addOrder(order);
     }
+
+    public void changeStatus(String name, String status) {
+        int index = list.findOrder(name);
+        list.getOrder(index).setStatus(status);
+    }
 }

@@ -23,7 +23,7 @@ public abstract class Staff extends SundevilPizza {
      * @param status
      */
     public void changeStatus(String name, String status) {
-        int index = list.findOrder(name);
-        list.getOrder(index).setStatus(status);
+        int index = listForChef.findOrder(name);
+        listForChef.getOrder(index).setStatus(status);
     }
 }
