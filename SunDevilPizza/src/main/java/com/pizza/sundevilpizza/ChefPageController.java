@@ -39,10 +39,6 @@ public class ChefPageController extends Staff {
     public void initialize() {
 
         // remove if Romeo fixes processing agent
-        for(int i = 0; i < list.getSize(); i++)
-        {
-            listForChef.addOrder(list.getOrder(0));
-        }
 
         loadOrder();
     }
@@ -126,7 +122,7 @@ public class ChefPageController extends Staff {
             listView.getItems().add(pane);
         }
 
-        list.printOrderList();
+        listForChef.printOrderList();
 
     }
 
