@@ -1,7 +1,6 @@
 package com.pizza.sundevilpizza;
 
 import Functions.Pizza;
-import Functions.ProcessingAgent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -24,6 +22,8 @@ public class LoginCheckoutController {
     private TextField asurite_field;
     @FXML
     private PasswordField password_field;
+    @FXML
+    private Label error_label;
 
     private String strPassword;
     private String strAsurite;
@@ -44,14 +44,35 @@ public class LoginCheckoutController {
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
-        FileReader in = new FileReader("data/StudentPasswords.txt");
+        boolean flag = false;
+        strAsurite = asurite_field.getText();
+        strPassword = password_field.getText();
+        // read password file
+        FileReader in = new FileReader("src/main/java/data/StudentPasswords.txt");
         BufferedReader br = new BufferedReader(in);
         String line;
+
         while ((line = br.readLine()) != null) {
-            if(line.contains(" "))
-                System.out.println(line);
+            String[] lineSplit = line.split(" ");
+            if(lineSplit[0].equals(strAsurite))
+            {
+                if(lineSplit[1].equals(strPassword))
+                {
+                    flag = true;
+                }
+            }
         }
         in.close();
+
+        if(flag)
+        {
+            System.out.println(strAsurite + "  " + strPassword);
+            error_label.setText("");
+        }
+        else
+        {
+            error_label.setText("Incorrect AsuriteID and password!");
+        }
 
 
 
