@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.processingAgentController">
+  <children>
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="598.0" prefWidth="478.0">
+          <children>
+            <Label alignment="CENTER" layoutX="19.0" layoutY="14.0" style="&#10;" text="Order Details" textAlignment="CENTER" underline="true" wrapText="false">
+                     <font>
+                <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+                     </textFill></Label>
+                  <ListView layoutX="19.0" layoutY="41.0" prefHeight="489.0" prefWidth="855.0" />
+                  <Pane layoutX="25.0" layoutY="49.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="25.0" layoutY="128.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="25.0" layoutY="260.0" prefHeight="79.0" prefWidth="843.0" />
+                  <Pane layoutX="28.0" layoutY="207.0" prefHeight="79.0" prefWidth="843.0" />
+            <Button fx:id="back" layoutX="385.0" layoutY="533.0" mnemonicParsing="false" onAction="#toWelcomePage" prefHeight="32.0" prefWidth="130.0" text="Back">
+              <font>
+                <Font size="24.0" />
+              </font>
+            </Button>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
