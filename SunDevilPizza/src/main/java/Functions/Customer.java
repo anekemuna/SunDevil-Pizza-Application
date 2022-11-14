@@ -3,12 +3,15 @@
  */
 package Functions;
 
-public class Customer extends SundevilPizza {
+public class Customer extends SundevilPizza{
 
     private String name;
     private String Asurite;
     private Pizza pizzaType;
     public String status;
+
+    private Order order;
+
 
     /**
      *
