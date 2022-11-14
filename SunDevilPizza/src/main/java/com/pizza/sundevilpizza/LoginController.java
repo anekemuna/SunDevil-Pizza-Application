@@ -18,11 +18,11 @@ public class LoginController {
     private Scene scene;
     private Pizza newPizza;
     @FXML
-    private TextField asurite_field;
+    private TextField asurite;
     @FXML
-    private PasswordField password_field;
+    private PasswordField password;
     @FXML
-    private Label error_label;
+    private Label error;
 
     private String strPassword;
     private String strAsurite;
@@ -40,8 +40,8 @@ public class LoginController {
 
     public void handleTrackOrderSubmit(ActionEvent event) throws IOException {
         boolean flag = false;
-        strAsurite = asurite_field.getText();
-        strPassword = password_field.getText();
+        strAsurite = asurite.getText();
+        strPassword = password.getText();
         // read password file
         FileReader in = new FileReader("src/main/java/data/StudentPasswords.txt");
         BufferedReader br = new BufferedReader(in);
@@ -61,6 +61,8 @@ public class LoginController {
 
         if(flag)
         {
+            error.setText("");
+
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(fxmlLoader.load(), 900, 600);
@@ -70,7 +72,7 @@ public class LoginController {
         }
         else
         {
-            error_label.setText("Incorrect AsuriteID and password!");
+            error.setText("Incorrect AsuriteID and password!");
         }
 
 
