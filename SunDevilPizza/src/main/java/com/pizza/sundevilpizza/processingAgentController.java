@@ -39,10 +39,10 @@ public class processingAgentController extends ProcessingAgent {
 
 
 
-    public void chefReady(ActionEvent event) throws IOException {
+    /*public void chefReady(ActionEvent event) throws IOException {
            changeStatus(name, "Cooking");
            sendToChef(Order order);
-    }
+    }*/
 
 
 
@@ -55,7 +55,7 @@ public class processingAgentController extends ProcessingAgent {
         stage.show();
     }
 
-    public void customerOrder(){
+   /* public void customerOrder(){
 
         for(int i = 0; i < list.getSize(); i++) {
         Order current = new Order();
@@ -67,5 +67,5 @@ public class processingAgentController extends ProcessingAgent {
         pane = processPane(orderName, pizzaType, pizzaToppings);
         processList.getItems().add(pane);
     }
-    }
+    }*/
 }
