@@ -88,7 +88,7 @@ public class processingAgentController extends ProcessingAgent {
         stage.show();
     }
 
-   /* public void customerOrder(){
+   public void customerOrder(){
 
         for(int i = 0; i < list.getSize(); i++) {
         Order current = new Order();
@@ -100,5 +100,5 @@ public class processingAgentController extends ProcessingAgent {
         pane = orderPane(orderName, pizzaType, pizzaToppings);
         processList.getItems().add(pane);
     }
-    }*/
+    }
 }
