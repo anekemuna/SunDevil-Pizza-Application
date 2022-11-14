@@ -46,6 +46,7 @@ public class processingAgentController extends ProcessingAgent {
         type.setPrefSize(330.0, 33.0);
         type.setFont(new Font("Comic Sans MS", 18));
 
+
         Label toppings = new Label("Pizza Toppings: " + inputToppings);
         toppings.setPrefSize(675.0, 33.0);
         toppings.setFont(new Font("Comic Sans MS", 18));
@@ -87,7 +88,7 @@ public class processingAgentController extends ProcessingAgent {
         stage.show();
     }
 
-    public void customerOrder(){
+   /* public void customerOrder(){
 
         for(int i = 0; i < list.getSize(); i++) {
         Order current = new Order();
@@ -99,5 +100,5 @@ public class processingAgentController extends ProcessingAgent {
         pane = orderPane(orderName, pizzaType, pizzaToppings);
         processList.getItems().add(pane);
     }
-    }
+    }*/
 }
