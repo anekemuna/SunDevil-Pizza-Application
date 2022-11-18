@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.OrderStatusController">
+   <children>
+      <ImageView fitHeight="597.0" fitWidth="897.0">
+         <image>
+            <Image url="@image/Background_Pic.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="97.0" layoutX="403.0" layoutY="34.0" preserveRatio="true">
+               <image>
+                  <Image url="@image/pizza-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="306.0" layoutY="161.0" text="SunDevil Pizza" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="358.0" layoutY="224.0" text="Order Status" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="318.0" layoutY="337.0" text="Ready to Cook!" textFill="#ff81ab">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Button layoutX="80.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToStartUpPage" text="Back" />
+         </children></AnchorPane>
+   </children>
+</StackPane>
