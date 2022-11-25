@@ -28,8 +28,6 @@ public class ChefPageController extends Staff {
     private Stage stage;
     private Scene scene;
     @FXML
-    private static ScrollPane scrollPane;
-    @FXML
     private ListView listView;
 
     /**
