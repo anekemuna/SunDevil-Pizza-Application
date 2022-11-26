@@ -39,12 +39,12 @@
                   <Image url="@image/pepperoni_pizza.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="118.0" text="Veggie Delight">
+            <Button layoutX="138.0" layoutY="415.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="118.0" style="-fx-background-color: #ffffff;" text="Veggie Delight">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="411.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="128.0" text="Pepperoni Pizza">
+            <Button layoutX="411.0" layoutY="415.0" mnemonicParsing="false" onAction="#switchToToppingPage" prefHeight="43.0" prefWidth="128.0" text="Pepperoni Pizza">
                <font>
                   <Font size="13.0" />
                </font>
@@ -54,7 +54,10 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="51.0" layoutY="36.0" mnemonicParsing="false" onAction="#backToInitialPage" text="Back" />
+            <Button layoutX="56.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToInitialPage" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #ffffff;" text="Back" textFill="#535252">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Button>
          </children></AnchorPane>
    </children>
 </StackPane>

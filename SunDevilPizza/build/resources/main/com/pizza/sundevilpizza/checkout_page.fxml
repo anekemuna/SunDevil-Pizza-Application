@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.CheckoutController">
+<StackPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pizza.sundevilpizza.CheckoutController">
    <children>
       <ImageView fitHeight="597.0" fitWidth="897.0">
          <image>
@@ -75,12 +75,15 @@
             </Label>
             <Line endX="418.88885498046875" layoutX="278.0" layoutY="234.0" startX="-100.0" stroke="WHITE" />
             <Line endX="388.77777099609375" layoutX="319.0" layoutY="496.0" startX="-130.33334350585938" stroke="WHITE" />
-            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchToLogin" text="Check Out" textFill="#9e185a">
+            <Button layoutX="685.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #fafafa;" text="Check Out" textFill="#9e185a">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
-            <Button layoutX="51.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToToppingsPage" text="Back" />
+            <Button layoutX="56.0" layoutY="38.0" mnemonicParsing="false" onAction="#backToToppingsPage" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #ffffff;" text="Back" textFill="#535252">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font></Button>
             <Label fx:id="topping_3" layoutX="280.0" layoutY="377.0" prefHeight="34.0" prefWidth="119.0" textFill="WHITE">
                <font>
                   <Font size="23.0" />

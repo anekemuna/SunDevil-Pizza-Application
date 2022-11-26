@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -19,7 +19,7 @@
          </ImageView>
          <AnchorPane prefHeight="587.0" prefWidth="873.0">
             <children>
-                <Button layoutX="360.0" layoutY="344.0" onAction="#switchToChoosePizza" text="Place an Order" textFill="#828181">
+                <Button layoutX="360.0" layoutY="344.0" onAction="#switchToChoosePizza" style="-fx-background-color: #ffffff;" text="Place an Order" textFill="#535252">
                   <font>
                      <Font name="Comic Sans MS" size="20.0" />
                   </font></Button>
@@ -43,12 +43,15 @@
                      <Font name="Comic Sans MS" size="20.0" />
                   </font>
                </Label>
-               <Button layoutX="357.0" layoutY="457.0" mnemonicParsing="false" onAction="#switchToLoginPage" text="Track an Order" textFill="WHITE">
+               <Button layoutX="357.0" layoutY="457.0" mnemonicParsing="false" onAction="#switchToLoginPage" style="-fx-background-color: #f47373;" text="Track an Order" textFill="WHITE">
                   <font>
                      <Font name="Comic Sans MS" size="20.0" />
                   </font>
                </Button>
-               <Button layoutX="56.0" layoutY="61.0" mnemonicParsing="false" onAction="#backtoStartup" text="Back" />
+               <Button layoutX="56.0" layoutY="38.0" mnemonicParsing="false" onAction="#backtoStartup" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #ffffff;" text="Back" textFill="#535252">
+                  <font>
+                     <Font name="Comic Sans MS Bold" size="12.0" />
+                  </font></Button>
             </children>
          </AnchorPane>
       </children>
