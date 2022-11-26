@@ -3,6 +3,8 @@
  * This class keeps track of an order list. It has functions that manipulate the list and search in the list.
  */
 package Functions;
+import java.io.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class OrderList {
@@ -11,8 +13,56 @@ public class OrderList {
     /**
      * Constructor to instantiate orderList
      */
-    public OrderList(){
+    public OrderList()
+    {
         orderList = new ArrayList<Order>();
+
+        try(BufferedReader br = new BufferedReader(new FileReader("src/main/java/data/OrderListData.txt")))
+        {
+            int orderSize = Integer.parseInt(br.readLine());
+
+
+            for(int i = 0; i < orderSize; i++)
+            {
+                Order item = new Order();
+
+                item.setName(br.readLine());
+                item.setStatus(br.readLine());
+
+                // set pizza
+                Pizza newPizza = new Pizza();
+                newPizza.setType(br.readLine());
+
+                String pizzaTopping = br.readLine();
+                String [] token = pizzaTopping.split(" ");
+
+                for(int j = 1; j <= Integer.parseInt(token[0]); j++)
+                {
+                    newPizza.addToppings(token[j]);
+                }
+
+                newPizza.setPrice(Double.parseDouble(br.readLine()));
+
+                item.setPizza(newPizza);
+                orderList.add(item);
+
+                String empty = br.readLine();
+            }
+
+
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("File Not Found: " + fnfe);
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("IO Exception: " + ioe);
+        }
+        catch (NumberFormatException nfe)
+        {
+            System.out.println("Number Format Exception: " + nfe);
+        }
     }
 
     /**

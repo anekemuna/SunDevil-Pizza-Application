@@ -9,9 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class LoginCheckoutController extends Customer{
     private Stage stage;
@@ -45,6 +43,7 @@ public class LoginCheckoutController extends Customer{
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
+
         int flagOrder = 0;
         boolean flag = false;
         strAsurite = asurite_field.getText();
@@ -100,6 +99,30 @@ public class LoginCheckoutController extends Customer{
                     flagOrder = 1;
                 }
             }
+
+            // write new list to file
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/OrderListData.txt")))
+            {
+                bw.write(list.getSize()+ "");
+                bw.newLine();
+
+                for(int i = 0; i < list.getSize(); i++)
+                {
+                    Order item = list.getOrder(i);
+                    bw.write(item.getName() + "\n");
+                    bw.write(item.getStatus() + "\n");
+                    bw.write(item.getPizza().getType() + "\n");
+                    bw.write(item.getPizza().returnToppingList().size() + " ");
+                    bw.write(item.getPizza().getToppings() + "\n");
+                    bw.write(item.getPizza().getPrice() + "\n");
+                    bw.newLine();
+                }
+
+                list.printOrderList();
+            }
+            catch (IOException exception)
+            {}
+
 
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -9,8 +9,7 @@
 package Functions;
 import Functions.OrderList;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.*;
 
 public abstract class Staff extends SundevilPizza {
     /**
@@ -23,5 +22,34 @@ public abstract class Staff extends SundevilPizza {
     protected void changeStatus(String name, String status) {
         int index = list.findOrder(name);
         list.getOrder(index).setStatus(status);
+
+        // rewrites the list
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/OrderListData.txt")))
+        {
+            bw.write(list.getSize()+ "");
+            bw.newLine();
+
+            for(int i = 0; i < list.getSize(); i++)
+            {
+                Order item = list.getOrder(i);
+                bw.write(item.getName() + "\n");
+                bw.write(item.getStatus() + "\n");
+                bw.write(item.getPizza().getType() + "\n");
+                bw.write(item.getPizza().returnToppingList().size() + " ");
+                bw.write(item.getPizza().getToppings() + "\n");
+                bw.write(item.getPizza().getPrice() + "\n");
+                bw.newLine();
+            }
+
+
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("File Not Found: " + fnfe);
+        }
+        catch (IOException ioe)
+        {
+            System.out.println("IO Exception: " + ioe);
+        }
     }
 }
