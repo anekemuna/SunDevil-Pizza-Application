@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Pizza {
     private String type;
     private double price;
-    private static ArrayList<String> toppings;
+    private ArrayList<String> toppings;
 
     /**
      * Constructor

@@ -69,8 +69,20 @@ public class OrderList {
      * to add a new order to the orderList
      * @param newOrder
      */
-    public void addOrder(Order newOrder){
+    public void addOrder(Order newOrder)
+    {
+        System.out.println("\nAddOrder...");
+        newOrder.printOrder();
+
+        System.out.println("\nBefore OrderList");
+        printOrderList();
+
         orderList.add(newOrder);
+
+        System.out.println("\nAfter OrderList");
+        printOrderList();
+
+        System.out.println("....End AddOrder\n\n");
     }
 
     /**
