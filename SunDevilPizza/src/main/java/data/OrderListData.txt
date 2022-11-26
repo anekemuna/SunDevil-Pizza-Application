@@ -1,19 +1,13 @@
-3
+2
 testing
 Ready to Cook
-Pepperoni Pizza
-2 Onion Cheese 
-21.5
+Veggie Delight
+3 Olive Onion Mushroom 
+20.0
 
 abcde
 Ready to Cook
-Veggie Pizza
-2 Onion Cheese 
-23.0
-
-anya
-Ready to Cook
-Cheese Pizza
-2 Onion Cheese 
-20.0
+Pepperoni Pizza
+3 Olive Onion Mushroom 
+24.5
 

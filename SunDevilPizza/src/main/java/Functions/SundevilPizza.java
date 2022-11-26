@@ -7,11 +7,7 @@
  * The rest of specific functions will be implemented in the child classes
  */
 package Functions;
-import Functions.Order;
-import Functions.OrderList;
-import Functions.Pizza;
 
-import java.util.ArrayList;
 
 public class SundevilPizza {
     protected static OrderList list = new OrderList();

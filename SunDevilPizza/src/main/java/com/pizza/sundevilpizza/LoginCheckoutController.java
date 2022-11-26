@@ -37,17 +37,19 @@ public class LoginCheckoutController extends Customer{
         CheckoutController control = fxmlLoader.getController();
         control.setCheckoutPizza(newPizza); // set pizza for checkout page
 
-        //stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);
-        //stage.show();
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
+        System.out.println("\n\nLoginCHeckOut Pizza...");
+        newPizza.printPizza();
+        System.out.println("...End LoginCheckOut Pizza\n\n");
 
         int flagOrder = 0;
         boolean flag = false;
         strAsurite = asurite_field.getText();
         strPassword = password_field.getText();
+
         // read password file
         FileReader in = new FileReader("src/main/java/data/StudentPasswords.txt");
         BufferedReader br = new BufferedReader(in);
@@ -118,17 +120,20 @@ public class LoginCheckoutController extends Customer{
                     bw.newLine();
                 }
 
-                list.printOrderList();
             }
             catch (IOException exception)
             {}
+
+            System.out.println("\n\nLoginCHeckOut List...\n");
+            list.printOrderList();
+            System.out.println("...End LoginCheckOut list\n\n");
 
 
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(fxmlLoader.load(), 900, 600);
 
-            // pass user name
+            // pass username
             OrderStatusController control = fxmlLoader.getController();
             control.setCustomerName(strAsurite, flagOrder);
 
@@ -142,8 +147,6 @@ public class LoginCheckoutController extends Customer{
             password_field.clear();
             error_label.setText("Incorrect AsuriteID and password!");
         }
-
-
 
     }
 
