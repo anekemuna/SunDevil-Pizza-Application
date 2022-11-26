@@ -69,7 +69,7 @@ public class LoginController {
 
             // pass user name
             OrderStatusController control = fxmlLoader.getController();
-            control.setCustomerName(strAsurite);
+            control.setCustomerName(strAsurite, 0);
 
             stage.setTitle("SunDevil Pizza");
             stage.setScene(scene);

@@ -45,6 +45,7 @@ public class LoginCheckoutController extends Customer{
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
+        int flagOrder = 0;
         boolean flag = false;
         strAsurite = asurite_field.getText();
         strPassword = password_field.getText();
@@ -70,12 +71,35 @@ public class LoginCheckoutController extends Customer{
             error_label.setText("");
 
             //create order
-            newOrder = new Order();
-            newOrder.setName(strAsurite);
-            newOrder.setPizza(newPizza);
-            newOrder.setStatus("Ready to Cook");
+            if(list.findOrder(strAsurite) == -1)
+            {
+                newOrder = new Order();
+                newOrder.setName(strAsurite);
+                newOrder.setPizza(newPizza);
+                newOrder.setStatus("Ready to Cook");
 
-            list.addOrder(newOrder);
+                list.addOrder(newOrder);
+            }
+            else
+            {
+                int no = list.findOrder(strAsurite);
+                Order temp = list.getOrder(no);
+
+                if(temp.getStatus().equals("Ready for Pickup"))
+                {
+                    list.deleteOrder(no);
+                    newOrder = new Order();
+                    newOrder.setName(strAsurite);
+                    newOrder.setPizza(newPizza);
+                    newOrder.setStatus("Ready to Cook");
+
+                    list.addOrder(newOrder);
+                }
+                else
+                {
+                    flagOrder = 1;
+                }
+            }
 
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -83,7 +107,7 @@ public class LoginCheckoutController extends Customer{
 
             // pass user name
             OrderStatusController control = fxmlLoader.getController();
-            control.setCustomerName(strAsurite);
+            control.setCustomerName(strAsurite, flagOrder);
 
             stage.setTitle("SunDevil Pizza");
             stage.setScene(scene);

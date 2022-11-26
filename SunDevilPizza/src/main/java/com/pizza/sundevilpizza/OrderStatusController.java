@@ -20,6 +20,8 @@ public class OrderStatusController extends Customer {
     private String name;
     @FXML
     private Label statusLabel;
+    @FXML
+    private Label statusLabel2;
 
     // Link any pizza Button to Next Scene
     public void switchToStartUpPage(ActionEvent event) throws IOException {
@@ -32,15 +34,28 @@ public class OrderStatusController extends Customer {
 
     }
 
-    public void setCustomerName (String newName)
+    public void setCustomerName (String newName, int flagOrder)
     {
         name = newName;
 
         int orderIndex = list.findOrder(name);
-        Order customerOrder = list.getOrder(orderIndex);
 
-        statusLabel.setText(customerOrder.getStatus());
-        System.out.println(customerOrder.getStatus());
+        if(orderIndex >= 0 && orderIndex < list.getSize() && flagOrder == 0)
+        {
+            Order customerOrder = list.getOrder(orderIndex);
+            statusLabel.setText(customerOrder.getStatus());
+        }
+        else if(flagOrder == 1 && orderIndex >= 0 && orderIndex < list.getSize())
+        {
+            statusLabel.setText("You Have an Incomplete Order!");
+            statusLabel2.setText("Try Again Later!");
+        }
+        else
+        {
+            statusLabel.setText("You Have No Existing Order!");
+        }
+
+
 
 
     }

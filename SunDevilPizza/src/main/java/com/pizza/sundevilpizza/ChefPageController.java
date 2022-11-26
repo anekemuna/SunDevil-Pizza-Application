@@ -5,23 +5,18 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
 import javafx.scene.control.*;
 
 import Functions.*;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class ChefPageController extends Staff {
 
@@ -85,7 +80,7 @@ public class ChefPageController extends Staff {
          */
         ready.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-               changeStatus(inputName, "Ready for pickup");
+               changeStatus(inputName, "Ready for Pickup");
                listView.getItems().clear();
                loadOrder();
                System.out.println("Orders in list after Ready is clicked:");
