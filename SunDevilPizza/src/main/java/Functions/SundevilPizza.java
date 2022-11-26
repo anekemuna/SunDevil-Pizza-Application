@@ -14,7 +14,7 @@ import Functions.Pizza;
 import java.util.ArrayList;
 
 public class SundevilPizza {
-    protected static OrderList list;// = new OrderList();
+    protected static OrderList list = new OrderList();
     /**
      * when an order is completed, finishOrder will remove the order from the list
      * @param name

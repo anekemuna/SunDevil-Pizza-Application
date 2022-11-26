@@ -1,5 +1,6 @@
 package com.pizza.sundevilpizza;
 
+import Functions.OrderList;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SunDevilPizzaApplication extends Application {
-
     private static Stage stg;
     @Override
     public void start(Stage stage) throws IOException {
@@ -19,6 +19,11 @@ public class SunDevilPizzaApplication extends Application {
         stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void stop (){
+
+        System.out.println("Ended");
     }
 
     public static void main(String[] args) {
