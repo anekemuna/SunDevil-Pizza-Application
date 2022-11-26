@@ -32,7 +32,7 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label layoutX="318.0" layoutY="337.0" text="Ready to Cook!" textFill="#ff81ab">
+            <Label fx:id="statusLabel" layoutX="318.0" layoutY="337.0" text="Ready to Cook!" textFill="#ff81ab">
                <font>
                   <Font size="38.0" />
                </font>

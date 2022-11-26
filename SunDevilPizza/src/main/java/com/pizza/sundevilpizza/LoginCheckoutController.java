@@ -80,12 +80,19 @@ public class LoginCheckoutController extends Customer{
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(fxmlLoader.load(), 900, 600);
+
+            // pass user name
+            OrderStatusController control = fxmlLoader.getController();
+            control.setCustomerName(strAsurite);
+
             stage.setTitle("SunDevil Pizza");
             stage.setScene(scene);
             stage.show();
         }
         else
         {
+            asurite_field.clear();
+            password_field.clear();
             error_label.setText("Incorrect AsuriteID and password!");
         }
 
@@ -93,7 +100,7 @@ public class LoginCheckoutController extends Customer{
 
     }
 
-    public void setPizza(Pizza pizza){
+    public void setNewPizza(Pizza pizza){
         newPizza = pizza;
     }
 
