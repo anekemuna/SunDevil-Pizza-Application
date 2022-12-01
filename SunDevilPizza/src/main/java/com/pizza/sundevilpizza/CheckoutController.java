@@ -114,7 +114,7 @@ public class CheckoutController {
 
         // pass pizza object to next scene
         LoginCheckoutController control = fxmlLoader.getController();
-        control.setPizza(newPizza); // set pizza for next page
+        control.setNewPizza(newPizza); // set pizza for next page
 
         stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);

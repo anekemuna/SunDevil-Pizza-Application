@@ -9,11 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-public class LoginCheckoutController extends Customer{
+public class LoginCheckoutController extends SundevilPizza{
     private Stage stage;
 
     private Scene scene;
@@ -39,15 +37,19 @@ public class LoginCheckoutController extends Customer{
         CheckoutController control = fxmlLoader.getController();
         control.setCheckoutPizza(newPizza); // set pizza for checkout page
 
-        //stage.setTitle("SunDevil Pizza");
         stage.setScene(scene);
-        //stage.show();
     }
 
     public void handleSubmit(ActionEvent event) throws IOException {
+        System.out.println("\n\nLoginCHeckOut Pizza...");
+        newPizza.printPizza();
+        System.out.println("...End LoginCheckOut Pizza\n\n");
+
+        int flagOrder = 0;
         boolean flag = false;
         strAsurite = asurite_field.getText();
         strPassword = password_field.getText();
+
         // read password file
         FileReader in = new FileReader("src/main/java/data/StudentPasswords.txt");
         BufferedReader br = new BufferedReader(in);
@@ -70,30 +72,85 @@ public class LoginCheckoutController extends Customer{
             error_label.setText("");
 
             //create order
-            newOrder = new Order();
-            newOrder.setName(strAsurite);
-            newOrder.setPizza(newPizza);
-            newOrder.setStatus("Ready to Cook");
+            if(list.findOrder(strAsurite) == -1)
+            {
+                newOrder = new Order();
+                newOrder.setName(strAsurite);
+                newOrder.setPizza(newPizza);
+                newOrder.setStatus("Ready to Cook");
 
-            list.addOrder(newOrder);
+                list.addOrder(newOrder);
+            }
+            else
+            {
+                int no = list.findOrder(strAsurite);
+                Order temp = list.getOrder(no);
+
+                if(temp.getStatus().equals("Ready for Pickup"))
+                {
+                    list.deleteOrder(no);
+                    newOrder = new Order();
+                    newOrder.setName(strAsurite);
+                    newOrder.setPizza(newPizza);
+                    newOrder.setStatus("Ready to Cook");
+
+                    list.addOrder(newOrder);
+                }
+                else
+                {
+                    flagOrder = 1;
+                }
+            }
+
+            // write new list to file
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/data/OrderListData.txt")))
+            {
+                bw.write(list.getSize()+ "");
+                bw.newLine();
+
+                for(int i = 0; i < list.getSize(); i++)
+                {
+                    Order item = list.getOrder(i);
+                    bw.write(item.getName() + "\n");
+                    bw.write(item.getStatus() + "\n");
+                    bw.write(item.getPizza().getType() + "\n");
+                    bw.write(item.getPizza().returnToppingList().size() + " ");
+                    bw.write(item.getPizza().getToppings() + "\n");
+                    bw.write(item.getPizza().getPrice() + "\n");
+                    bw.newLine();
+                }
+
+            }
+            catch (IOException exception)
+            {}
+
+            System.out.println("\n\nLoginCHeckOut List...\n");
+            list.printOrderList();
+            System.out.println("...End LoginCheckOut list\n\n");
+
 
             FXMLLoader fxmlLoader = new FXMLLoader(SunDevilPizzaApplication.class.getResource("order_status_page.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(fxmlLoader.load(), 900, 600);
+
+            // pass username
+            OrderStatusController control = fxmlLoader.getController();
+            control.setCustomerName(strAsurite, flagOrder);
+
             stage.setTitle("SunDevil Pizza");
             stage.setScene(scene);
             stage.show();
         }
         else
         {
+            asurite_field.clear();
+            password_field.clear();
             error_label.setText("Incorrect AsuriteID and password!");
         }
 
-
-
     }
 
-    public void setPizza(Pizza pizza){
+    public void setNewPizza(Pizza pizza){
         newPizza = pizza;
     }
 

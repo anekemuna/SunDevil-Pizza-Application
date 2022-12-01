@@ -5,30 +5,23 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
 import javafx.scene.control.*;
 
 import Functions.*;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class ChefPageController extends Staff {
 
     private Stage stage;
     private Scene scene;
-    @FXML
-    private static ScrollPane scrollPane;
     @FXML
     private ListView listView;
 
@@ -37,10 +30,9 @@ public class ChefPageController extends Staff {
      */
     @FXML
     public void initialize() {
-
-        // remove if Romeo fixes processing agent
-
         loadOrder();
+        System.out.println("Orders in list when Chef Page is initialized: ");
+        list.printOrderList();
     }
 
    //Back button: on click, go back to welcome page
@@ -88,10 +80,11 @@ public class ChefPageController extends Staff {
          */
         ready.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-               changeStatus(inputName, "Ready for pickup");
-               listForChef.deleteOrder(inputName);
+               changeStatus(inputName, "Ready for Pickup");
                listView.getItems().clear();
                loadOrder();
+               System.out.println("Orders in list after Ready is clicked:");
+               list.printOrderList();
             }
         });
 
@@ -107,22 +100,23 @@ public class ChefPageController extends Staff {
     }
 
     /**
-     * load the orders in listforChef to the chef's view
+     * load the orders in list to the chef's view
      */
     public void loadOrder(){
 
-        for(int i = 0; i < listForChef.getSize(); i++){
+        for(int i = 0; i < list.getSize(); i++){
             Order current = new Order();
-            current = listForChef.getOrder(i);
-            String orderName = current.getName();
-            String pizzaType = current.getPizza().getType();
-            String pizzaToppings = current.getPizza().getToppings();
-            Pane pane = new Pane();
-            pane = orderPane(orderName, pizzaType, pizzaToppings);
-            listView.getItems().add(pane);
+            current = list.getOrder(i);
+            if (current.getStatus().equals("Cooking")) {
+                String orderName = current.getName();
+                String pizzaType = current.getPizza().getType();
+                String pizzaToppings = current.getPizza().getToppings();
+                Pane pane = new Pane();
+                pane = orderPane(orderName, pizzaType, pizzaToppings);
+                listView.getItems().add(pane);
+            }
         }
 
-        listForChef.printOrderList();
 
     }
 
