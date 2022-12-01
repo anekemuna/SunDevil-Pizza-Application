@@ -1,25 +1,21 @@
 //by YungLing Liu
 /**
- * This is the child class of SundevilPizza and the parent class of ProcessingAgent and Chef
- * This class contains a list of orders called "listForChef", which is the list for the chef.
+ * This is the child class of SunDevilPizza and the parent class of ProcessingAgent and Chef
  * This list is accessible for the child classes (ProcessingAgent and Chef)
- * (Order should only be in this list once it's sent to the chef by the processing agent) <- This function is implemented in ProcessingAgent
  * This class also contains functions that will be useful for both ProcessingAgent and Chef (i.e. changeStatus)
  */
 package Functions;
-import Functions.OrderList;
-
 import java.io.*;
 
 public abstract class Staff extends SundevilPizza {
     /**
-     * This function let staff (both Processing Agent and Chef) change the status of the order
-     * parae
+     * This function let staff (both Processing Agent and Chef) change the status of the order and re-writes the list to text file
      *
-     * @param name
-     * @param status
+     * @param name AsuriteID associated with order
+     * @param status the value to update the status too
      */
     protected void changeStatus(String name, String status) {
+
         int index = list.findOrder(name);
         list.getOrder(index).setStatus(status);
 
@@ -40,8 +36,6 @@ public abstract class Staff extends SundevilPizza {
                 bw.write(item.getPizza().getPrice() + "\n");
                 bw.newLine();
             }
-
-
         }
         catch (FileNotFoundException fnfe)
         {
@@ -50,6 +44,10 @@ public abstract class Staff extends SundevilPizza {
         catch (IOException ioe)
         {
             System.out.println("IO Exception: " + ioe);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception: " + e);
         }
     }
 }

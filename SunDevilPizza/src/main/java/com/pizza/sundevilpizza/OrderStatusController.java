@@ -3,6 +3,7 @@ package com.pizza.sundevilpizza;
 import Functions.Customer;
 import Functions.Order;
 import Functions.Pizza;
+import Functions.SundevilPizza;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class OrderStatusController extends Customer {
+public class OrderStatusController extends SundevilPizza {
     private Stage stage;
     private Scene scene;
     private Pizza newPizza;

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 
-public class LoginCheckoutController extends Customer{
+public class LoginCheckoutController extends SundevilPizza{
     private Stage stage;
 
     private Scene scene;

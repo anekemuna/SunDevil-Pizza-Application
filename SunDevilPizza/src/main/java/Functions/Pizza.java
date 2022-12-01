@@ -6,6 +6,10 @@ package Functions;
 import java.util.ArrayList;
 
 public class Pizza {
+
+    /**
+     * type
+     */
     private String type;
     private double price;
     private ArrayList<String> toppings;

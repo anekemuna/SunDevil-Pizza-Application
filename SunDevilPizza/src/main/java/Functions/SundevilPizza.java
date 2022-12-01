@@ -10,14 +10,18 @@ package Functions;
 
 
 public class SundevilPizza {
+
+    /**
+     * Program master list for orders
+     */
     protected static OrderList list = new OrderList();
+
     /**
      * when an order is completed, finishOrder will remove the order from the list
-     * @param name
+     * @param name  the AsuriteID of the customer
      */
     public void finishOrder(String name){
         list.deleteOrder(name);
     }
-
 
 }
