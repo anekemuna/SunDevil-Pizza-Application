@@ -6,9 +6,13 @@ package Functions;
 import java.util.ArrayList;
 
 public class Pizza {
+
+    /**
+     * type
+     */
     private String type;
     private double price;
-    private static ArrayList<String> toppings;
+    private ArrayList<String> toppings;
 
     /**
      * Constructor
@@ -77,7 +81,7 @@ public class Pizza {
 
         String toppingList = "";
         for (int i = 0; i < toppings.size(); i++){
-            toppingList = toppingList  + toppings.get(i) + "    ";
+            toppingList = toppingList  + toppings.get(i) + " ";
         }
         return toppingList;
     }

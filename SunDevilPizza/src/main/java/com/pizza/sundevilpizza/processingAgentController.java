@@ -16,7 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.*;
 import Functions.*;
 import java.io.IOException;
-public class processingAgentController extends ProcessingAgent {
+public class processingAgentController extends Staff {
     private Stage stage;
 
     private Scene scene;
@@ -31,6 +31,8 @@ public class processingAgentController extends ProcessingAgent {
     @FXML
     public void initialize() {
         customerOrder();
+        System.out.println("Orders in list when Processing Agent Page is initialized");
+        list.printOrderList();
     }
 
 
@@ -64,11 +66,10 @@ public class processingAgentController extends ProcessingAgent {
         cook.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 changeStatus(inputName, "Cooking");
-                int index = list.findOrder(inputName);
-                sendToChef(list.getOrder(index));
-                list.deleteOrder(inputName);
                 processList.getItems().clear();
                 customerOrder();
+                System.out.println("Orders in list after COOK is clicked");
+                list.printOrderList();
             }
         });
 
@@ -98,12 +99,14 @@ public class processingAgentController extends ProcessingAgent {
         for(int i = 0; i < list.getSize(); i++) {
         Order current = new Order();
         current = list.getOrder(i);
-        String orderName = current.getName();
-        String pizzaType = current.getPizza().getType();
-        String pizzaToppings = current.getPizza().getToppings();
-        Pane pane = new Pane();
-        pane = orderPane(orderName, pizzaType, pizzaToppings);
-        processList.getItems().add(pane);
+        if (current.getStatus().equals("Ready to Cook")){
+            String orderName = current.getName();
+            String pizzaType = current.getPizza().getType();
+            String pizzaToppings = current.getPizza().getToppings();
+            Pane pane = new Pane();
+            pane = orderPane(orderName, pizzaType, pizzaToppings);
+            processList.getItems().add(pane);
+        }
     }
     }
 }

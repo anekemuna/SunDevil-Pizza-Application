@@ -10,7 +10,6 @@ public class Customer extends SundevilPizza{
     private Pizza pizzaType;
     public String status;
 
-    private Order order;
 
 
     /**
