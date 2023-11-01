@@ -25,11 +25,11 @@ The SunDevil Pizza Application is a Java-based software solution developed as a 
 - JavaFX
 - IntelliJ
 - SceneBuilder
+- Gradle
 
 ## File Structure
 
-- /src/main: Contains the source code for the pizza application.
-- /database: Stores the information in the file system-based database.
+- /src/main: Contains the source code for the pizza application and database
 
 ## Contributors
 
@@ -41,4 +41,4 @@ The SunDevil Pizza Application is a Java-based software solution developed as a 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License  - see the [LICENSE](LICENSE) file for details.
